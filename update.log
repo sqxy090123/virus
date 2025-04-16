@@ -1,4 +1,8 @@
 
+version: 1.0.7:
+    - Microsoft Defender: Trojan:Script/Wacatac.B!ml
+    - Microsoft Defender: Worm:Win32/Jenxcus!pz
+
 version: 1.0.6:
     - Microsoft Defender: Trojan:Script/Wacatac.B!ml
     - Microsoft Defender: Worm:Win32/Jenxcus!pz
