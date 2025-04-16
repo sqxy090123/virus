@@ -1,0 +1,19 @@
+[package]
+name = "virus"
+version = "1.0.7"
+edition = "2021"
+# build = "build.rs"
+
+[dependencies]
+base64 = "0.22.1"
+raw-cpuid = "11.5.0"
+reqwest = { version = "0.12.15", features = ["blocking"] }
+sys-info = "0.9.1"
+winapi = { version = "0.3", features = ["wincon", "processthreadsapi", "securitybaseapi", "handleapi", "winuser"] }
+
+[profile.release]
+panic = 'abort'
+
+[package.metadata.cargo-xbuild]
+rustflags = ["-C", "link-args=app.res"]
+

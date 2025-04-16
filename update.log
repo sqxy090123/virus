@@ -1,0 +1,13 @@
+
+version: 1.0.6:
+    - Microsoft Defender: Trojan:Script/Wacatac.B!ml
+    - Microsoft Defender: Worm:Win32/Jenxcus!pz
+
+version: 1.0.5:
+    - McAfee Scanner: Ti!875181990B7B
+    - Ikarus: Trojan.Win64.Agent
+
+version: 1.0.4:
+    - add 'add_user' command to add a user to the database
+    - McAfee Scanner: Ti!875181990B7B
+    - Ikarus: Trojan.Win64.Agent
