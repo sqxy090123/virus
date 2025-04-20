@@ -1,4 +1,9 @@
 
+version: 1.0.8-fix#1
+    - find new chars:
+        ‪
+        
+
 version: 1.0.7:
     - Microsoft Defender: Trojan:Script/Wacatac.B!ml
     - Microsoft Defender: Worm:Win32/Jenxcus!pz
