@@ -9,10 +9,10 @@ base64 = "0.22.1"
 raw-cpuid = "11.5.0"
 reqwest = { version = "0.12.15", features = ["blocking"] }
 sys-info = "0.9.1"
-winapi = { version = "0.3.9", features = ["processthreadsapi", "handleapi", "securitybaseapi", "winnt", "wincon", "winuser", "everything"] }
+winapi = { version = "0.3.0", features = ["processthreadsapi", "handleapi", "securitybaseapi", "winnt", "wincon", "winuser", "everything"] }
 
 [profile.release]
 panic = 'abort'
 
-[package.metadata.cargo-xbuild]
-rustflags = ["-C", "link-args=app.res"]
+#[package.metadata.cargo-xbuild]
+#rustflags = ["-C", "link-args=app.res"]
