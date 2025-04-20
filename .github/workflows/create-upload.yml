@@ -5,6 +5,9 @@ on:
     tags:
       - "v*" # 仅在推送匹配 v* 的标签时触发
 
+permissions:
+     contents: write
+
 jobs:
   release:
     runs-on: windows-latest
