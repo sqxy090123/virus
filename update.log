@@ -1,8 +1,8 @@
 
 version: 1.0.8-fix#1
     - find new chars:
-        ‪
-        
+        "‪" maybe can be used to mix the script
+
 
 version: 1.0.7:
     - Microsoft Defender: Trojan:Script/Wacatac.B!ml
