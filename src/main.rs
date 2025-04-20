@@ -8,11 +8,8 @@ pub mod detect;
 
 use core::wait;
 use std::env;
-use std::process::Command;
 use std::os::windows::process::CommandExt; // Required for creation_flags on Windows
 use winapi::um::wincon::FreeConsole;
-use std::fs::File;
-use std::io::Write;
 
 //use sys::*;
 

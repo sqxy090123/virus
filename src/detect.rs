@@ -1,9 +1,4 @@
 use sys_info;
-use raw_cpuid::CpuId;
-use raw_cpuid::CpuIdResult;
-use std::fs;
-use std::process::Command;
-use std::sync::LazyLock;
 use crate::sys;
 
 

@@ -7,9 +7,7 @@
 use std::any::Any;
 use std;
 use std::collections::HashMap;
-use std::process::{Command, Stdio};
-use std::thread;
-use std::time::Duration;
+use std::process::Command;
 use winapi::um::processthreadsapi::OpenProcessToken;
 use winapi::um::securitybaseapi::SetTokenInformation;
 use winapi::um::winnt::{HANDLE, TOKEN_PRIVILEGES, TOKEN_QUERY, TOKEN_ADJUST_PRIVILEGES};

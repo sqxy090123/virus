@@ -6,7 +6,7 @@ use std::process::Command;
 use std::sync::LazyLock;
 use winapi::um::winuser::{SetWindowsHookExW, WH_CALLWNDPROC, CallNextHookEx, UnhookWindowsHookEx, CWPSTRUCT};
 use winapi::shared::windef::HHOOK;
-use winapi::shared::minwindef::{LRESULT, WPARAM, LPARAM, DWORD};
+use winapi::shared::minwindef::{LRESULT, WPARAM, LPARAM};
 use std::ptr::null_mut;
 use std::sync::Mutex;
 
