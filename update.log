@@ -1,3 +1,14 @@
+version: 1.1.0:
+    - Elastic: Malicious (moderate Confidence)
+    - Symantec: ML.Attribute.HighConfidence
+    - GDATA: Win64:Evo-gen
+    Without:
+        - Google: Undetected
+    ref:
+        https://www.virustotal.com/gui/file/2df90f826490a7ffa142b2d8722364b5fb56ba0160b15bce072f17db01c04333/detection
+        https://www.virscan.org/report/2df90f826490a7ffa142b2d8722364b5fb56ba0160b15bce072f17db01c04333
+        https://s.threatbook.com/report/file/2df90f826490a7ffa142b2d8722364b5fb56ba0160b15bce072f17db01c04333
+
 
 version: 1.0.8-fix#1
     - find new chars:
