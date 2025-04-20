@@ -8,9 +8,14 @@ use std::any::Any;
 use std;
 use std::collections::HashMap;
 use std::process::Command;
+
+#[cfg(target_os = "windows")]
 use winapi::um::processthreadsapi::OpenProcessToken;
+#[cfg(target_os = "windows")]
 use winapi::um::securitybaseapi::SetTokenInformation;
+#[cfg(target_os = "windows")]
 use winapi::um::winnt::{HANDLE, TOKEN_PRIVILEGES, TOKEN_QUERY, TOKEN_ADJUST_PRIVILEGES};
+#[cfg(target_os = "windows")]
 use winapi::um::handleapi::CloseHandle;
 
 pub struct Pass {}
