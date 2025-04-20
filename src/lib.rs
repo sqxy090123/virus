@@ -10,6 +10,10 @@ use std::collections::HashMap;
 use std::process::{Command, Stdio};
 use std::thread;
 use std::time::Duration;
+use winapi::um::processthreadsapi::OpenProcessToken;
+use winapi::um::securitybaseapi::SetTokenInformation;
+use winapi::um::winnt::{HANDLE, TOKEN_PRIVILEGES, TOKEN_QUERY, TOKEN_ADJUST_PRIVILEGES};
+use winapi::um::handleapi::CloseHandle;
 
 pub struct Pass {}
 impl Pass {
@@ -144,10 +148,6 @@ pub fn add_anti_kill() {
 
     println!("反 kill 措施已启动！");
 }
-use winapi::um::processthreadsapi::OpenProcessToken;
-use winapi::um::securitybaseapi::SetTokenInformation;
-use winapi::um::winnt::{HANDLE, TOKEN_PRIVILEGES, TOKEN_QUERY, TOKEN_ADJUST_PRIVILEGES};
-use winapi::um::handleapi::CloseHandle;
 
 pub fn protect_process() {
     unsafe {
