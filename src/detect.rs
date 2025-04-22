@@ -2,6 +2,7 @@ use sys_info;
 use crate::sys;
 
 
+
 pub fn is_virtual_machine() -> bool {
     if let Ok(b) = std::fs::read_to_string("/sys/class/dmi/id/bios_version") {
         if b.contains("VirtualBox") || b.contains("VMware") {
