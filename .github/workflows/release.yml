@@ -19,7 +19,7 @@ jobs:
 
     # 构建项目
     - name: Build Project
-      run: cargo build --release
+      run: cargo build --release --target-dir ./target
 
     # 调试构建输出路径
     - name: Debug Build Output
@@ -44,7 +44,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ../target/release/virus.exe # 替换为你的二进制文件路径
+        asset_path: ../target/release/virus.exe # Corrected path
         asset_name: virus_${{ github.ref_name }}.exe
         asset_content_type: application/octet-stream
 # git push origin vx.x.x
