@@ -3,12 +3,10 @@ name: Release
 on:
   push:
     tags:
-      - "v*" # 仅在推送匹配 v* 的标签时触发
+      - "v[0-9]+*" # 仅在推送符合语义化版本的标签时触发
 
 permissions:
-     contents: write
-     id-token: write # 可能需要用于身份验证
-     actions: write
+  contents: write
 
 jobs:
   release:
@@ -19,14 +17,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # 构建项目（根据需要修改）
+    # 构建项目
     - name: Build Project
       run: cargo build --release
+
+    # 调试构建输出路径
+    - name: Debug Build Output
+      run: dir ./target/release
 
     # 创建 Release
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1 # 由v1改为v2
+      uses: actions/create-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -37,7 +39,7 @@ jobs:
 
     # 上传资源到 Release
     - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
+      uses: actions/upload-release-asset@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
