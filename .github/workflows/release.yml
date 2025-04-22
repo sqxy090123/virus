@@ -26,7 +26,7 @@ jobs:
     # 创建 Release
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v2 # 由v1改为v2
+      uses: actions/create-release@v1 # 由v1改为v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
