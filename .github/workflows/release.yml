@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - "v[0-9]+*" # 仅在推送符合语义化版本的标签时触发
+      - "v[0-9]+*" # Trigger on semantic version tags
 
 permissions:
   contents: write
@@ -13,42 +13,37 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    # 检出仓库代码
-    - name: Checkout code
-      uses: actions/checkout@v3
+      # Checkout repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # 构建项目
-    - name: Build Project
-      run: cargo build --release
+      # Build the project
+      - name: Build Project
+        run: cargo build --release --target-dir ./target
 
-    # 调试构建输出路径
-    - name: Debug Build Output
-      run: dir ./target/release
-    
-    # 打印当前目录
-    - name: Tree
-      run: tree .
-    
-    # 创建 Release
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref_name }}
-        release_name: ${{ github.ref_name }}
-        draft: false
-        prerelease: false
+      # Debug build output path
+      - name: Debug Build Output
+        run: dir ./target/release
 
-    # 上传资源到 Release
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: virus.exe # Corrected path
-        asset_name: virus_${{ github.ref_name }}.exe
-        asset_content_type: application/octet-stream
-# git push origin vx.x.x
+      # Create a Release
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+
+      # Upload assets to the Release
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./target/release/virus.exe
+          asset_name: virus_${{ github.ref_name }}.exe
+          asset_content_type: application/octet-stream
