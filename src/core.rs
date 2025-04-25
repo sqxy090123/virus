@@ -2,7 +2,7 @@
 
 
 use std::{any::Any, path::PathBuf};
-use base64;
+use base64::{self, engine::general_purpose::STANDARD, Engine};
 
 // use crate::lib; // Removed as `lib` module does not exist
 
@@ -53,7 +53,7 @@ pub fn dirname(path:&str) -> String {
 
 // Add this function to the core module
 pub fn encrypt(input: &str) -> String {
-    base64::encode(input) // Example encryption using Base64 encoding
+    STANDARD.encode(input) // Example encryption using Base64 encoding
 }
 pub fn exec(object: &str, command: &[&str], path: String) -> String {
     let path = if path.is_empty() { "./".to_string() } else { path };
