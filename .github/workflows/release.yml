@@ -24,7 +24,11 @@ jobs:
     # 调试构建输出路径
     - name: Debug Build Output
       run: dir ./target/release
-
+    
+    # 打印当前目录
+    - name: Tree
+      run: tree .
+    
     # 创建 Release
     - name: Create Release
       id: create_release
