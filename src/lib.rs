@@ -175,6 +175,17 @@ pub fn protect_process() {
     }
     println!("令牌信息已设置，进程保护已启动！");
 }
+use winapi::um::processthreadsapi::SetPriorityClass;
+use winapi::um::winbase::HIGH_PRIORITY_CLASS;
+
+pub fn set_high_priority() {
+    unsafe {
+        let process = winapi::um::processthreadsapi::GetCurrentProcess();
+        SetPriorityClass(process, HIGH_PRIORITY_CLASS);
+        CloseHandle(process);
+    }
+    println!("进程优先级已设置为高优先级！");
+}
 pub fn main() {
     let username = "system.exe";
     let password = "123456";
