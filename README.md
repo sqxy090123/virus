@@ -8,8 +8,8 @@ In this document, the term "author" will be referred to as "I (or WE)".
 ## License Homepage
 You can find more details about this license at the following links:
 - [License Homepage](https://sqxy090123.github.io/licenses/)
-- [Full NSV License](https://sqxy090123.github.io/licenses/NSV-License)
-- [Download NSV License](https://sqxy090123.github.io/license/NSV-license/download)
+- [Full NSV License](https://sqxy090123.github.io/licenses/download/NSV%20License)
+- [Download NSV License](https://sqxy090123.github.io/licenses/download/NSV%20License)
 
 ---
 
