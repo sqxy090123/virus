@@ -61,6 +61,26 @@ pub fn anti_debug() {
     }
 }
 
+use winapi::um::processthreadsapi::GetCurrentThread;
+use ntapi::ntpsapi::NtSetInformationThread;
+
+pub fn hide_debugger() {
+    unsafe {
+        let thread = GetCurrentThread();
+        let status = NtSetInformationThread(
+            thread,
+            0x11, // ThreadHideFromDebugger
+            std::ptr::null_mut(),
+            0,
+        );
+        if status == 0 {
+            println!("成功隐藏调试器！");
+        } else {
+            eprintln!("隐藏调试器失败！");
+        }
+    }
+}
+
 pub fn open_url_manual(url: &str) -> Result<(), String> {
     if cfg!(target_os = "windows") {
         Command::new("cmd")
