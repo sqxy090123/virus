@@ -19,7 +19,7 @@ jobs:
 
     # 构建项目
     - name: Build Project
-      run: cargo build --release --target-dir ./target
+      run: cargo build --release
 
     # 调试构建输出路径
     - name: Debug Build Output
