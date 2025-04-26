@@ -11,4 +11,12 @@
 由于各大杀毒软件互通，当病毒第一次被检测到后24h内，其他杀软会陆陆续续检测到
 
 # 分发条件
-允许未授权的二次分发，但分发后的协议必须包括[F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)或[NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)(授权过的二次分发不受此限制)
+对于未得到授权的二次分发:
+- 分发后的协议必须包括[F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)和[NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)
+- 需要标明来源
+对于得到授权的二次分发:
+- 需要标明许可id
+- 需要标明来源
+
+# 测试md
+`import`
