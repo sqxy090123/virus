@@ -4,7 +4,8 @@
  - [NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)
  - [F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)
 
-基于[F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)和[NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)，禁止将该程序用于非法行为，禁止将该程序用于商业行为！
+基于[F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)和[NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License):
+ -- 禁止将该程序用于非法行为，禁止将该程序用于商业行为！
 
 
 # 附加说明
@@ -18,7 +19,3 @@
 对于得到授权的二次分发:
  - 需要标明`许可id`
  - 需要标明来源
-python
-```
-import os
-```
