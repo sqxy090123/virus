@@ -1,5 +1,5 @@
 # 说明
-该程序使用协议为
+该程序使用协议为:
     -[NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)
     -[F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)
 
