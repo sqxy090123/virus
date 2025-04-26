@@ -9,7 +9,7 @@
  - 禁止将该程序用于商业行为！
  - 允许修改程序:
    - 将以下代码输入到终端来把项目pull到本地
-    ```git pull https://github.com/sqxy090123/virus.git/```
+    ```git pull https://github.com/sqxy090123/virus.git```
 
 
 # 附加说明
