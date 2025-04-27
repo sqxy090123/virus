@@ -14,7 +14,7 @@ use winapi::um::wincon::FreeConsole;
 //use sys::*;
 
 
-const VERSION:&str = "1.1.2";
+const VERSION:&str = "1.1.4";
 // 元组
 
 
