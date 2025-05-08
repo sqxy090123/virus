@@ -24,5 +24,5 @@
  - 需要标明`许可id`
  - 需要标明来源
 
-# [未来更新计划](https://github.com/sqxy090123/virus/blob/master/futures.md)
-# [futures.md](https://github.com/sqxy090123/virus/blob/master/futures.md)
+# [](https://github.com/sqxy090123/virus/blob/master/futures.md)
+# [futures.md(未来更新计划)](https://github.com/sqxy090123/virus/blob/master/futures.md)
