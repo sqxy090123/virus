@@ -23,3 +23,6 @@
 对于得到授权的二次分发:
  - 需要标明`许可id`
  - 需要标明来源
+
+# 未来计划
+[futures.md](https://github.com/sqxy090123/virus/blob/master/futures.md)
