@@ -3,7 +3,7 @@
 使用到的AI:
  - [ChatGPT](https://chatgpt.com)
  - [DeepSeek](https://chat.deepseek.com)
- - []
+ - [GitHub Copilot](#)
 
 # 说明
 该程序使用协议为:
