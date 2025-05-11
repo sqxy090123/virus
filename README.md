@@ -3,7 +3,7 @@
 使用到的AI:
  - [ChatGPT](https://chatgpt.com)
  - [DeepSeek](https://chat.deepseek.com)
- - [GitHub Copilot](#)
+ - [GitHub Copilot](https://github.com/copilot)
 
 # 说明
 该程序使用协议为:
@@ -30,7 +30,7 @@
  - 需要标明`许可id`
  - 需要标明来源
 
-# [futures.md(未来更新计划)](https://github.com/sqxy090123/virus/blob/master/futures.md)
+# [futures.md(未来更新计划)](./blob/master/futures.md)
 
 ## 关于未来的病毒生成器
 计划使用python制作出.exe程序和.js/.py/.vbs/.cmd/.com等可以执行的代码
