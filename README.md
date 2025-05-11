@@ -1,4 +1,10 @@
 
+# 该程序部分代码由AI生成
+使用到的AI:
+ - [ChatGPT](https://chatgpt.com)
+ - [DeepSeek](https://chat.deepseek.com)
+ - []
+
 # 说明
 该程序使用协议为:
  - [NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)
