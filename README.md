@@ -1,33 +1,25 @@
-# NSV License (Basic Version)
 
-Copyright (c) 2025 sqxy090123
+# 说明
+该程序使用协议为:
+ - [NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)
+ - [F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)
 
-## Notes
-In this document, the term "author" will be referred to as "I (or WE)".
+基于[F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)和[NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License):
+ - 禁止将该程序用于非法行为！
+ - 禁止将该程序用于商业行为！
+ - 允许修改程序:
+   - 将以下代码输入到终端来把项目pull到本地
+    ```git pull https://github.com/sqxy090123/virus.git```
 
-## License Homepage
-You can find more details about this license at the following links:
-- [License Homepage](https://sqxy090123.github.io/licenses/)
-- [Full NSV License](https://sqxy090123.github.io/licenses/download/NSV%20License)
-- [Download NSV License](https://sqxy090123.github.io/licenses/download/NSV%20License)
 
----
+# 附加说明
+由于各大杀毒软件互通，当病毒第一次被检测到后24h内，其他杀软会陆陆续续检测到
 
-## Usage Terms
-- All resources (including pictures, videos, scripts, audios, etc.) are free to use.
-- For **commercial purposes**, you must contact the author to obtain permission. You can reach the author via:
-  - Email: <sqx20150423@outlook.com>
-  - Email: <sqx20150423@gmail.com>
+# 分发条件
+对于未得到授权的二次分发:
+ - 分发后的协议必须包括[F License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FF%20License)和[NSV License](https://github.com/sqxy090123/sqxy090123.github.io/blob/main/licenses%2Fdownload%2FNSV%20License)
+ - 需要标明来源
 
----
-
-## Copyright Infringement
-Some resources included in this project were obtained through online crawling.  
-If **anyone** believes their copyright has been **infringed**, please contact the author at <sqx20150423@outlook.com>.  
-Upon confirmation, the content will be **removed** immediately.
-
----
-
-## Notice
-This software is **limited** in its usage.  
-Please ensure that you only run this program on your own computer or on computers where you have explicit permission to do so.
+对于得到授权的二次分发:
+ - 需要标明`许可id`
+ - 需要标明来源
