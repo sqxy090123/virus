@@ -1,5 +1,9 @@
 #!/usr/bin/env rust
 
+/*
+ * © sqxy090123@github 2025
+ */
+
 // Removed `pub mod lib;` as `lib.rs` is the root of the crate's library target.
 pub mod core;
 pub mod sys;
